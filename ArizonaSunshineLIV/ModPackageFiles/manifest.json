@@ -1,0 +1,9 @@
+{
+  "name": "LIV",
+  "version_number": "1.0.0",
+  "description": "Add LIV support to Arizona Sunshine.",
+  "website_url": "https://www.liv.tv/",
+  "dependencies": [
+    "LavaGang-MelonLoader-0.5.7"
+  ]
+}
