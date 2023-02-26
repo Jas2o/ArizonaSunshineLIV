@@ -5,7 +5,7 @@ Historically the game had legacy/quads mixed reality support that was removed wi
 
 # Installation and use
 - Download MelonLoader Installer and install 0.5.7 in Arizona Sunshine folder.
-- From the ArizonaSunshine2LIV release zip, extract the folder Mods into Arizona Sunshine folder.
+- From the [ArizonaSunshineLIV release zip](https://github.com/Jas2o/ArizonaSunshineLIV/releases), extract the folder Mods into Arizona Sunshine folder.
 - Start either game from Steam.
 - From LIV, change Capture tab to Manual and select ArizonaSunshine.exe (not Melon Loader).
 
