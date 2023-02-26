@@ -1,4 +1,4 @@
-# ArizonaSunshine2LIV
+# ArizonaSunshineLIV
 Adds LIV support to Arizona Sunshine (after DLC update), allowing for mixed reality capture or avatars in third person.
 
 Historically the game had legacy/quads mixed reality support that was removed with the DLC update.
