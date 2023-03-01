@@ -355,7 +355,7 @@ w: {w}";
             };
         }
 
-        // TODO: Document change. Mathf.Deg2Rad and Methf.PI were stripped by IL2cpp so I hardcoded it here.
+        // TODO: Document change. Mathf.Deg2Rad and Mathf.PI were stripped by IL2cpp so I hardcoded it here.
         private static float deg2Rad = (3.14159265358979f * 2f) / 360f;
         public static SDKMatrix4x4 Perspective(float vFov, float aspect, float zNear, float zFar)
         {

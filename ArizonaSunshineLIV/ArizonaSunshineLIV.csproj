@@ -78,7 +78,6 @@
     <Compile Include="GameLayer.cs" />
     <Compile Include="LIV\LIV.cs" />
     <Compile Include="LIV\SDKBridge.cs" />
-    <Compile Include="LIV\SDKFont.cs" />
     <Compile Include="LIV\SDKRender.cs" />
     <Compile Include="LIV\SDKRenderShared.cs" />
     <Compile Include="LIV\SDKShaders.cs" />
@@ -90,24 +89,6 @@
     <Compile Include="SystemLibrary.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\ArizonaSunshineLIVUnity\AssetBundles\liv-shaders">
-      <Link>LIVAssets\liv-shaders</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\ArizonaSunshineLIVUnity\AssetBundles\liv-shaders.manifest">
-      <Link>LIVAssets\liv-shaders.manifest</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\ArizonaSunshineLIVUnity\AssetBundles\stencil-mask">
-      <Link>LIVAssets\stencil-mask</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\ArizonaSunshineLIVUnity\AssetBundles\stencil-mask.manifest">
-      <Link>LIVAssets\stencil-mask.manifest</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="LIVAssets\LIV_Bridge.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
