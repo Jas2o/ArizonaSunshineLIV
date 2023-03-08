@@ -50,10 +50,16 @@ namespace ArizonaSunshineLIV {
 			 *   UIRaycasterCamera
 			 *   Camera MR UI
 			 *   Camera (uieye) - These are HUD elements on top of the world view
-			 *   Camera (eye) - This is the world view
+			 *   Camera (eye) - This is the world view, it's under a SteamVR object that is not active without -mr
 			 *   PrintRenderer
 			 *   ProjectorCamera
 			*/
+
+            GameObject cameraRig = GameObject.Find("CameraRig");
+            Transform steamVR = cameraRig.transform.Find("SteamVR");
+            bool steamVRwasActive = steamVR.gameObject.activeSelf;
+            MelonLogger.Msg($"CameraRig/SteamVR object was " + (steamVRwasActive ? "active" : "not active"));
+            steamVR.gameObject.SetActive(true);
 
             Camera[] arrCam = GameObject.FindObjectsOfType<Camera>().ToArray();
             //MelonLogger.Msg(">>> Camera count: " + arrCam.Length);
@@ -65,6 +71,9 @@ namespace ArizonaSunshineLIV {
                     break;
                 } // else MelonLogger.Msg(cam.name);
             }
+
+            //Can't move unless it stays enabled
+            //steamVR.gameObject.SetActive(steamVRwasActive);
         }
 
         private void UpdateFollowSpawnedCamera() {

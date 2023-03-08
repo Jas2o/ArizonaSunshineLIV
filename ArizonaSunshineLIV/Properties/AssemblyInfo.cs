@@ -37,5 +37,5 @@ using MelonLoader;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // MelonLoader
-[assembly: MelonInfo(typeof(ArizonaSunshineLIVMod), "LIV", "1.0.0", "Jas2o")]
+[assembly: MelonInfo(typeof(ArizonaSunshineLIVMod), "LIV", "1.0.1", "Jas2o")]
 [assembly: MelonGame]
