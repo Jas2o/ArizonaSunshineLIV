@@ -85,10 +85,8 @@ namespace LIV.SDK.Unity
         public static Shader GetShader(string name) {
             if (_shaderCache != null && _shaderCache.state)
                 return GetShaderFromCache(name);
-            else
-                return Shader.Find(name); //Attempt to find it in the player build instead
-
-            return null;
+            
+            return Shader.Find(name); //Attempt to find it in the player build instead
         }
 
         private static Shader GetShaderFromCache(string name) {

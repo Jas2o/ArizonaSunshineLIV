@@ -6,6 +6,7 @@
         TransparentFX = 1, //Sky issues
         IgnoreRaycast = 2,
         Water = 4,
+        UI = 5, //Ammo counters
         OverlayUI = 8, //Rotation black out
         Item = 9,
         HolsterRing = 19, //Holster ring

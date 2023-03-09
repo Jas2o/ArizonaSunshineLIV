@@ -15,8 +15,8 @@ namespace ArizonaSunshineLIV {
         private Camera spawnedCamera;
         private static LIV.SDK.Unity.LIV livInstance;
 
-        public override void OnApplicationStart() {
-            base.OnApplicationStart();
+        public override void OnInitializeMelon() {
+            base.OnInitializeMelon();
 
             SetUpLiv();
             OnPlayerReady += TrySetupLiv;
@@ -146,8 +146,13 @@ namespace ArizonaSunshineLIV {
             livInstance.HMDCamera = camera;
             livInstance.MRCameraPrefab = cameraFromPrefab;
             livInstance.stage = cameraParent;
-            livInstance.fixPostEffectsAlpha = false; //AS
-            livInstance.spectatorLayerMask = -537395459; //Arizona Sunshine, sky issue, holder ring, rotation black out, hands
+            livInstance.fixPostEffectsAlpha = false; //Arizona Sunshine
+            livInstance.spectatorLayerMask = ~0;
+            livInstance.spectatorLayerMask &= ~(1 << (int)GameLayer.TransparentFX); //sky issue
+            livInstance.spectatorLayerMask &= ~(1 << (int)GameLayer.HolsterRing); //holster ring
+            livInstance.spectatorLayerMask &= ~(1 << (int)GameLayer.PlayerHands); //hands
+            livInstance.spectatorLayerMask &= ~(1 << (int)GameLayer.OverlayUI); //rotation black out
+            livInstance.spectatorLayerMask &= ~(1 << (int)GameLayer.UI); // ammo counters
 
             livObject.SetActive(true);
         }
